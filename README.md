@@ -1,5 +1,3 @@
-# --Q_Q--
-
 # Ticket.java
 - `int ID //ID Number`
 - `int VIPLevel //Priority number`
