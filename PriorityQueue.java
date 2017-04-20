@@ -9,7 +9,7 @@ public interface PriorityQueue <T> {
     //Returns the smallest item stored in this priority queue without removing it.
     public T peekMin();
 
-    // Removes and returns the smallest item stored in this priority queue.
+    //Removes and returns the smallest item stored in this priority queue.
     public T removeMin();
 
 }
