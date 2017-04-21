@@ -1,4 +1,4 @@
-public class Ticket {
+public class Ticket implements Comparable {
     
     private int ID;
 
@@ -13,10 +13,11 @@ public class Ticket {
     private String solution;
 
 
-    public Ticket() {
+    public Ticket(int setVIP) {
 	ID = 0;
 	solved = false;
     }
+
     public int getID() {
 	return ID;
     }
@@ -39,6 +40,10 @@ public class Ticket {
 
     public String getSolution() {
 	return solution;
+    }
+
+    public int compareTo(Object a) {
+	return getVIP() - ((Ticket)a).getVIP();
     }
 
     
