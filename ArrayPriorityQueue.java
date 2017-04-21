@@ -1,20 +1,15 @@
-//Team Far Corner: Tiffany Moi, Ryan Siu, Mohamed Tamara
-//APCS2 pd5
-//HW32 -- Getting Past the Velvet Rope
-//2017-04-20
-
 import java.util.ArrayList;
 import java.lang.RuntimeException;
 
-public class ArrayPriorityQueue<T> implements PriorityQueue {
+public class ArrayPriorityQueue implements PriorityQueue {
     
-    private ArrayList<T> _data;
+    private ArrayList<Ticket> _data;
     
     public ArrayPriorityQueue(){
-	_data = new ArrayList<T>();
+	_data = new ArrayList<Ticket>();
     }
     
-    public void add(T x){
+    public void add(Ticket x){
 	_data.add(x);
     }//O(1)
     
@@ -22,24 +17,25 @@ public class ArrayPriorityQueue<T> implements PriorityQueue {
 	return _data.size() == 0;
     }//O(1)
     
-    public T peekMin(){
+    public Ticket peekMin(){
 	if (isEmpty()){
 	    throw new RuntimeException();
 	}
-	T x = _data.get(0);
+	Ticket x = _data.get(0);
 	for (int i = 1; i < _data.size(); i ++){
-	    if (_data.get(i).compareTo(x) < 0){
-		x = _data.get(i);
+	    Ticket curr = _data.get(i);
+	    if (curr.compareTo(x) < 0){
+		x = curr;
 	    }
 	}
 	return x;
     }//O(n)
     
-    public T removeMin(){
+    public Ticket removeMin(){
 	if (isEmpty()){
 	    throw new RuntimeException();
 	}
-	T x = _data.get(0);
+	Ticket x = _data.get(0);
 	int index = 0;
 	for (int i = 1; i < _data.size(); i ++){
 	    if (_data.get(i).compareTo(x) < 0){
@@ -56,25 +52,15 @@ public class ArrayPriorityQueue<T> implements PriorityQueue {
     }
     
     public static void main(String[] args){
-	ArrayPriorityQueue<Integer> bob = new ArrayPriorityQueue<Integer>();
-	bob.add(9);
-	bob.add(18);
-	bob.add(7);
-	bob.add(1);
+	ArrayPriorityQueue bob = new ArrayPriorityQueue();
+	bob.add(new Ticket(0));
 	System.out.println(bob);
-	System.out.println(bob.peekMin());//1
-	System.out.println(bob.removeMin());
+	bob.add(new Ticket(1));
 	System.out.println(bob);
-	System.out.println(bob.peekMin());//7
-	System.out.println(bob.removeMin());
+	bob.add(new Ticket(2));
 	System.out.println(bob);
-	System.out.println(bob.peekMin());//9
-	System.out.println(bob.removeMin());
+	System.out.println( bob.removeMin() );
 	System.out.println(bob);
-	System.out.println(bob.peekMin());//18
-	System.out.println(bob.removeMin());
-	System.out.println(bob);
-	System.out.println(bob.peekMin()); //should throw exception
     }
 
 }
