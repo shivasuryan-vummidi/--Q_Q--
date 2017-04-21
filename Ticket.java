@@ -12,11 +12,17 @@ public class Ticket implements Comparable {
 
     private String solution;
 
-
-    public Ticket(int setVIP) {
-	ID = 0;
+    //Constructor
+    public Ticket(int setID, int setVIP, String setProblem, String setName) {
+	ID = setID;
+	VIPLevel = setVIP;
+	problem = setProblem;
 	solved = false;
+	name = setName;
+	solution = "";
     }
+
+    /*****************ACCESSORS*****************/
 
     public int getID() {
 	return ID;
@@ -41,6 +47,25 @@ public class Ticket implements Comparable {
     public String getSolution() {
 	return solution;
     }
+
+    /***************END ACCESSORS***************/
+
+
+    /*****************MUTATORS*****************/
+
+    public boolean setSolved(setSolved) {
+	boolean temp = getSolved();
+	solved = setSolved;
+	return temp;
+    }
+
+    public String setSolution(setSolution) {
+	String temp = getSolution();
+	solution = setSolution;
+	return temp;
+    }
+
+    /***************END MUTATORS***************/
 
     public int compareTo(Object a) {
 	return getVIP() - ((Ticket)a).getVIP();
