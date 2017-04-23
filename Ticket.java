@@ -1,51 +1,51 @@
 public class Ticket implements Comparable {
     
-    private int ID;
+    private int _ID;
 
-    private int VIPLevel;
+    private int _VIPLevel;
 
-    private String problem;
+    private String _problem;
 
-    private boolean solved;
+    private boolean _solved;
 
-    private String name;
+    private String _name;
 
-    private String solution;
+    private String _solution;
 
     //Constructor
     public Ticket(int setID, int setVIP, String setProblem, String setName) {
-	ID = setID;
-	VIPLevel = setVIP;
-	problem = setProblem;
-	solved = false;
-	name = setName;
-	solution = "";
+	_ID = setID;
+	_VIPLevel = setVIP;
+	_problem = setProblem;
+	_solved = false;
+	_name = setName;
+	_solution = "";
     }
 
     /*****************ACCESSORS*****************/
 
     public int getID() {
-	return ID;
+	return _ID;
     }
 
     public int getVIP() {
-	return VIPLevel;
+	return _VIPLevel;
     }
 
     public String getProblem() {
-	return problem;
+	return _problem;
     }
 
     public boolean getSolved() {
-	return solved;
+	return _solved;
     }
 
     public String getName() {
-	return name;
+	return _name;
     }
 
     public String getSolution() {
-	return solution;
+	return _solution;
     }
 
     /***************END ACCESSORS***************/
@@ -53,22 +53,22 @@ public class Ticket implements Comparable {
 
     /*****************MUTATORS*****************/
 
-    public boolean setSolved(setSolved) {
-	boolean temp = getSolved();
-	solved = setSolved;
-	return temp;
+    public void setSolved() {
+        _solved = true;
     }
 
-    public String setSolution(setSolution) {
-	String temp = getSolution();
-	solution = setSolution;
-	return temp;
+    public void setSolution(String solution) {
+	_solution = solution;
     }
 
     /***************END MUTATORS***************/
 
     public int compareTo(Object a) {
 	return getVIP() - ((Ticket)a).getVIP();
+    }
+
+    public String toString() {
+	return "\nTicket " + getID() + "\nVIP: " + getVIP() + "\nName: " + getName();
     }
 
     

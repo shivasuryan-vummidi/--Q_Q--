@@ -50,7 +50,8 @@ public class ArrayPriorityQueue implements PriorityQueue {
     public String toString(){
 	return _data.toString();
     }
-    
+
+    /*
     public static void main(String[] args){
 	ArrayPriorityQueue bob = new ArrayPriorityQueue();
 	bob.add(new Ticket(0));
@@ -62,5 +63,6 @@ public class ArrayPriorityQueue implements PriorityQueue {
 	System.out.println( bob.removeMin() );
 	System.out.println(bob);
     }
+    */
 
 }
