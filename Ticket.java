@@ -68,7 +68,7 @@ public class Ticket implements Comparable {
     }
 
     public String toString() {
-	return "\nTicket " + getID() + "\nVIP: " + getVIP() + "\nName: " + getName();
+	return "\nTicket " + getID() + "\nVIP: " + getVIP() + "\nName: " + getName() + "\nProblem: " + getProblem() + "\nSolution: " + getSolution();
     }
 
     
