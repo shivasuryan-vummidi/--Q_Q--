@@ -18,6 +18,7 @@ public class HelpDesk {
 		while (isEmpty() == false){
 			Ticket a = peekTicket();
 			System.out.println("Problem for user " + a.getName() + ": " + a.getProblem() + "\n");
+			System.out.print("Please enter the solution: ");
 			try{
 				solution = in.readLine();
 				a.setSolved();
