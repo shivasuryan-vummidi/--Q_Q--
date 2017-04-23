@@ -6,8 +6,6 @@ public class Ticket implements Comparable<Ticket> {
 
     private String _problem;
 
-    private boolean _solved;
-
     private String _name;
 
     private String _solution;
@@ -17,7 +15,6 @@ public class Ticket implements Comparable<Ticket> {
 	_ID = setID;
 	_VIPLevel = setVIP;
 	_problem = setProblem;
-	_solved = false;
 	_name = setName;
 	_solution = "";
     }
@@ -36,10 +33,6 @@ public class Ticket implements Comparable<Ticket> {
 	return _problem;
     }
 
-    public boolean getSolved() {
-	return _solved;
-    }
-
     public String getName() {
 	return _name;
     }
@@ -53,10 +46,6 @@ public class Ticket implements Comparable<Ticket> {
 
     /*****************MUTATORS*****************/
 
-    public void setSolved() {
-        _solved = true;
-    }
-
     public void setSolution(String solution) {
 	_solution = solution;
     }
@@ -68,7 +57,7 @@ public class Ticket implements Comparable<Ticket> {
     }
 
     public String toString() {
-	return "\nTicket " + getID() + "\nVIP: " + getVIP() + "\nName: " + getName() + "\nProblem: " + getProblem() + "\nSolution: " + getSolution() + "\n";
+	return "\nTicket " + getID() + "\nName: " + getName();
     }
 
     

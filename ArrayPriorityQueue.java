@@ -49,13 +49,10 @@ public class ArrayPriorityQueue<T extends Comparable <T>> implements PriorityQue
     }//O(n)
     
     public String toString(){
-	String rtn = "";
-	for (T i : _data)
-	    rtn += i.toString();
-	return rtn;
+	return _data.toString();
     }
 
-    
+    /*
     public static void main(String[] args){
 	ArrayPriorityQueue<Ticket> bob = new ArrayPriorityQueue<Ticket>();
 	bob.add(new Ticket(0, 2, "little issue", "Jon"));
@@ -83,7 +80,7 @@ public class ArrayPriorityQueue<T extends Comparable <T>> implements PriorityQue
 	System.out.println(bob2.removeMin());
 	System.out.println(bob2.removeMin());
 	System.out.println(bob2.removeMin());
-	
     }
+    */
     
 }
