@@ -2,13 +2,13 @@ import java.io.*;
 import java.util.*;
 public class HelpDesk {
     
-    private ArrayPriorityQueue _data;
+    private ArrayPriorityQueue<Ticket> _data;
     private int ticketCounter = 0;
-	private InputStreamReader isr;
+    private InputStreamReader isr;
     private BufferedReader in;
 	
     public HelpDesk() {
-		_data = new ArrayPriorityQueue();
+		_data = new ArrayPriorityQueue<Ticket>();
 		isr = new InputStreamReader( System.in );
 		in = new BufferedReader( isr );
     }

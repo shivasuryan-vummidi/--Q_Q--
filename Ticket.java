@@ -1,4 +1,4 @@
-public class Ticket implements Comparable {
+public class Ticket implements Comparable<Ticket> {
     
     private int _ID;
 
@@ -63,12 +63,12 @@ public class Ticket implements Comparable {
 
     /***************END MUTATORS***************/
 
-    public int compareTo(Object a) {
-	return getVIP() - ((Ticket)a).getVIP();
+    public int compareTo(Ticket a) {
+	return getVIP() - a.getVIP();
     }
 
     public String toString() {
-	return "\nTicket " + getID() + "\nVIP: " + getVIP() + "\nName: " + getName() + "\nProblem: " + getProblem() + "\nSolution: " + getSolution();
+	return "\nTicket " + getID() + "\nVIP: " + getVIP() + "\nName: " + getName() + "\nProblem: " + getProblem() + "\nSolution: " + getSolution() + "\n";
     }
 
     
