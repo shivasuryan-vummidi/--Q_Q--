@@ -25,3 +25,4 @@ In the ```HelpDesk``` class, we decided to write wrapper methods for editing the
  - We used InputStreamReader and BufferedReader to get user input in the terminal via prompts in our HelpDesk class. 
  - With [help](https://groups.google.com/a/stuy.edu/forum/?utm_source=digest&utm_medium=email#!category-topic/apcs16-17/aV5QNleukaw) from Gilvir, we were able to generically type our ArrayPriorityQueue to work with all classes that implement Comparable.  
  - We added wrapper methods to HelpDesk, as explained above.
+ - We created a digital flowchart diagramming the usage process of the app
