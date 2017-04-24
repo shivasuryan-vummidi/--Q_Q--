@@ -1,4 +1,4 @@
-# (insert team name)
+# SCRambled Eggs
 APCS2 pd5
 <br>
 Ryan Siu, Shiva Vummidi, Clive Johnston
